@@ -1,0 +1,7 @@
+what is html  ?
+html stands for hypertext markup language 
+html first time released in 1986 by tim berner lee 
+html is used for create any website of webpage
+html stands for hypertext markup language 
+html is not any any language it is a markup language 
+html file extension .html or .htm 
