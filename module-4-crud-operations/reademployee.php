@@ -17,28 +17,28 @@ $fetch=mysqli_fetch_array($query);
 </div>
 <div class="col-md-7">
 <h1>Read empoyee details </h1>
-<hr class="w-50 border border-white" />
+<hr class="w-50 border border-secondary" />
 <table align="left" class="p-5" cellspacing="25" cellpadding="25">
-<tr class="bg-white">
+<tr class="">
 <th>#id</th>
 <td><?php echo $fetch["empid"];?></td>
 </tr>
-<tr class="bg-white">
+<tr class="">
 <th>Name</th>
 <td><?php echo $fetch["employeename"];?></td>
 </tr>
 
-<tr class="bg-white">
+<tr class="">
 <th>salary</th>
 <td><?php echo $fetch["employeesalary"];?></td>
 </tr>
 
-<tr class="bg-white">
+<tr class="">
 <th>Address</th>
 <td><?php echo $fetch["employeeaddress"];?></td>
 </tr>
 
-<tr class="bg-white">
+<tr class="">
 <th>Added Date</th>
 <td><?php echo $fetch["added_date_time"];?></td>
 </tr>
