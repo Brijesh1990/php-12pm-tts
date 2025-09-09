@@ -68,14 +68,13 @@ crossorigin="anonymous"
 </head>
 <body>
 <!-- guru kripa login systems -->
-<div class="mx-auto mt-4 p-5 rounded-5  bg-info" style="border-radius: 15px; width:35%">
+ <div class="mx-auto mt-4 rounded-5  bg-primary" style="border-radius: 15px; width:35%">
 <div class="col-md-12 login-img mt-5">
-<img src="images/login.png" class="w-75 mx-auto ms-5" alt="Login Image" />
+<h4 class="text-white p-2 w-50 mx-auto text-center" style="font-size:30px">Task manager App</h4>
+<img src="images/login.png" alt="Login Image" class="w-75 ms-5" />
 </div>
-<div class="col-md-12">
+<div class="col-md-12 bg-white p-2"  style="border-radius: 15px;">
 <h3 class="text-dark w-50 mx-auto text-center" style="font-size:40px">Login Form</h3>
-<hr class="w-25 mx-auto" />
-
 <form method="post" class="w-50 mx-auto">
 <div class="form-group mt-3">
 <label for="username">Email</label>
@@ -98,7 +97,6 @@ placeholder="Enter Password"
 class="form-control"
 />
 </div>
-
 <div class="form-group mt-4">
 <input
 type="submit"

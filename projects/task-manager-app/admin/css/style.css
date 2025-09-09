@@ -24,6 +24,35 @@ body {
   color: white !important;
   font-size: 18px !important;
 }
+.dropdown
+{
+  padding: 2px;
+}
+.dropdown-menu
+{
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 15px 15px;
+  font-size: 19px;
+}
+.dropdown:hover .dropdown-menu
+{
+  display: block;
+}
+.dropdown-menu a
+{
+  color: black !important;
+  padding: 2px 12px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown a{
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+}
 
 .sidebar-links li {
   text-decoration: none;

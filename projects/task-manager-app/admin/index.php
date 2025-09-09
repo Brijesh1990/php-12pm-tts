@@ -10,7 +10,8 @@ $num_rows=mysqli_num_rows($query);
 $fetch=mysqli_fetch_array($query);
 if($num_rows==1)
 {
- $_SESSION["email"]=$fetch["email"];
+$_SESSION["aid"]=$fetch["aid"];   
+$_SESSION["email"]=$fetch["email"];
  echo "<script>
  alert('You are Logged in as Admin successfully')
  window.location='dashboard.php';

@@ -40,13 +40,14 @@ crossorigin="anonymous"
 </head>
 <body class="bodytask">
 <!-- guru kripa welcome -->
-<div class="mx-auto mt-4 p-5 rounded-5  bg-info" style="border-radius: 15px; width:35%">
+<div class="mx-auto mt-4 rounded-5  bg-primary" style="border-radius: 15px; width:35%">
 <div class="col-md-12 login-img mt-5">
+<h4 class="text-white p-2 w-50 mx-auto text-center" style="font-size:30px">Task manager App</h4>
 <img src="images/login.png" alt="Login Image" />
 </div>
-<div class="col-md-12">
-<h3 class="text-white w-50 mx-auto text-center" style="font-size:40px">Welcome</h3>
-<p class="w-50 mx-auto text-center text-center"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt culpa eos pariatur</p>
+<div class="col-md-12 bg-white p-2"  style="border-radius: 15px;">
+<h3 class="text-dark w-50 mx-auto text-center" style="font-size:40px">Welcome</h3>
+<p class="w-50 mx-auto text-center text-center"> Manage your tasks for free — Create, organize and automate your tasks easily with Zoho Projects.</p>
 
  <p class="mt-2 text-center"><a href='login.php'><button class="btn btn-md w-25 p-2 fs-5 bg-primary text-white">Login</button></a>
     
