@@ -124,41 +124,133 @@ crossorigin="anonymous"
 <div class="row">
 <div class="col-md-12 p-3 m-3 bg-primary shadow rounded-4 shadow text-white"><a href='manageprofile.php' class='text-white'>Manage Your Profile</a></div>
 </div>
-<!-- pie chart -->
- <div id="piechart" style="width: 100%; height: 350px; font-size:35px !important"></div>
-<div class="mx-auto mt-0 p-0 rounded-0 shadow-lg bg-white" style="border-radius: 15px; width:100%;">
-<!-- create a table for manage attendance -->
-<table class="table table-bordered table-striped mt-4">
-   <thead class="table-primary">
-      <tr>
-         <th>#</th>
-         <th>EmployeeName</th>
-         <th>Date</th>
-         <th>Status</th>
-         <th>Actions</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-      <?php
-      // Example: Fetch attendance records from database
-     $select=mysqli_query($con,"select tbl_attendance.*, name from tbl_attendance join tbl_addemployee on tbl_attendance.employee_id=tbl_addemployee.employee_id");
-     while($row=mysqli_fetch_array($select))
-     {          
-      ?>
-      <tr>
-      <td><?php echo $row["attendance_id"];?></td>
-      <td><?php echo $row["name"];?></td>
-      <td><?php echo $row["adddate"];?></td>
-      <td><?php echo $row["status"];?></td>
-       <td><a href="" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a></td>
-       </tr>
-      <?php 
-     }
-     ?>
-     
-   </tbody>
-</table>
+<!-- Manage profile -->
+<div class="mx-auto mt-0 p-5 rounded-0 shadow-lg bg-white" style="border-radius: 15px; width:100%;">
+
+<!-- manage profile -->
+<?php 
+if(isset($_SESSION["employee_id"]))
+{
+  $employee_id=$_SESSION["employee_id"];  
+  $select="select * from tbl_addemployee where employee_id='$employee_id'";
+  $query=mysqli_query($con,$select);
+  $fetch=mysqli_fetch_array($query);
+
+}
+
+?>
+<form class="p-0 w-75">
+
+<div class="form-group mt-3">
+<img src='./admin/<?php echo $fetch["photo"];?>' class='w-50'>    
+<input
+type="file"
+placeholder="Photo *"
+required
+class="form-control  text-white p-2 mt-2"
+/>
+</div>
+
+<div class="form-group mt-3">
+<input
+type="text"
+placeholder="Name *" value="<?php echo $fetch["name"];?>"
+required
+class="form-control bg-primary text-white p-2"
+/>
+</div>
+
+<div class="form-group mt-3">
+<input
+type="text"
+placeholder="Email *" value="<?php echo $fetch["email"];?>"
+required
+class="form-control bg-primary text-white p-2"
+/>
+</div>
+
+<!-- <div class="form-group mt-3">
+<input
+type="password"
+placeholder="Password *"
+required
+class="form-control bg-secondary text-white p-2"
+/>
+</div> -->
+
+<div class="form-group mt-3">
+<input
+type="text"
+placeholder="phone *" value="<?php echo $fetch["phone"];?>"
+required
+class="form-control bg-primary text-white p-2"
+/>
+</div>
+
+
+<!-- <div class="form-group mt-3">
+<label>Select state</label>
+<br />
+<select
+name="state"
+required
+class="form-control bg-secondary text-white p-2"
+>
+<option value="">-select state-</option>
+<?php 
+$sel="select * from tbl_state";
+$query=mysqli_query($con,$sel);
+while($fetch1=mysqli_fetch_array($query))
+{
+?>
+<option value="<?php echo $fetch1["state_id"];?>"><?php echo $fetch1["statename"];?></option>
+<?php 
+}
+?>
+</select>
+</div>
+
+<div class="form-group mt-3">
+<label>Select city</label>
+<br />
+<select
+name="city"
+required
+class="form-control bg-secondary text-white p-2"
+>
+<option value="">-select city-</option>
+<?php 
+$sel="select * from tbl_city";
+$query=mysqli_query($con,$sel);
+while($fetch2=mysqli_fetch_array($query))
+{
+?>
+<option value="<?php echo $fetch2["city_id"];?>"><?php echo $fetch2["cityname"];?></option>
+<?php 
+}
+?>
+</select>
+</div> -->
+
+<div class="form-group mt-3">
+<textarea
+placeholder="Full address *"
+required
+class="form-control bg-primary text-white p-2">
+<?php echo $fetch["address"];?>
+</textarea>
+</div>
+<div class="form-group mt-3">
+<input
+type="submit" name="upd_emp"
+value="Update Profile here"
+class="btn btn-md btn-primary p-2"
+/>
+</div>
+</form>
+
+</div>
+
 
 <!-- create attendance modal -->
 <!-- Attendance Modal -->

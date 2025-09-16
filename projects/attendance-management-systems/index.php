@@ -48,11 +48,16 @@ crossorigin="anonymous"
 <div class="col-md-12 bg-white p-2"  style="border-radius: 15px;">
 <h3 class="text-dark w-50 mx-auto text-center" style="font-size:40px">Welcome</h3>
 <p class="w-50 mx-auto text-center text-center"> Add Your Attendance for free — Create, organize and automate your tasks easily with Zoho Projects.</p>
-
- <p class="mt-2 text-center"><a href='dashboard.php'><button class="btn btn-md w-50 p-2 fs-5 bg-primary text-white">Add Attendance</button></a>
-    
+<p class="mt-2 text-center"><a href='#'><button class="btn btn-md w-50 p-2 fs-5 bg-primary text-white" onclick='login()'>Add Attendance</button></a>   
 </div>
 </div>
 </div>
+<script>
+function login()
+{
+ alert('Are you sure to add Attendance Login first ?')
+ window.location='login.php';    
+}    
+</script>    
 </body>
 </html>
